@@ -35,13 +35,22 @@ def sierpinski(points,degree,myTurtle):
 def main():
     myTurtle = turtle.Turtle()
     
+    turtle.tracer(0)
+    turtle.speed("fastest")
+    turtle.hideturtle()
+    
     turtle.bgcolor("black")
     myTurtle.color("green")
 
-    myWin = turtle.Screen()
+    # myWin = turtle.Screen()
 #myPoints = [[-100,-50],[0,100],[100,-50]]
     myPoints = [[-400,-200],[0,400],[400,-200]]
-    sierpinski(myPoints,3,myTurtle)
-    myWin.exitonclick()
+    sierpinski(myPoints, 6, myTurtle)
+    
+    
+    turtle.update()
+    print("Click to exit.")
+    turtle.exitonclick()
+    # myWin.exitonclick()
 
 main()
